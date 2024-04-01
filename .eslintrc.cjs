@@ -10,7 +10,13 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh', 'prettier', 'import'],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        'semi': false,
+        "endOfLine": "off"
+      }
+    ],
     'no-console': 'warn',
     'no-debugger': 'warn',
     'no-var': 'error',
