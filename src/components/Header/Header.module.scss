@@ -2,15 +2,15 @@
 
 .container {
   width: 100%;
-  // height: 80px;
   background-color: $white;
-  box-shadow: 0px 16px 40px 10px rgba(119, 119, 119, 0.08);
+  box-shadow: 0px 16px 40px 10px rgba(122, 118, 118, 0.08);
+  z-index: 1;
 }
 
 .navigation {
   height: 100%;
   padding: 10px 20px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-size: 20px;
   font-weight: 400;
@@ -28,42 +28,94 @@
     column-gap: 15px;
   }
 
-  // TODO: update to display none when mobile nav ready
+  // .navContainer {
+  //   display: flex;
+  //   flex-wrap: nowrap;
+  //   overflow: hidden;
+  // }
+
+  // .navItem {
+  //   padding: 10px;
+  //   text-decoration: none;
+  //   color: #333;
+  //   white-space: nowrap;
+  // }
+
   .desktopNavigation {
-    display: block;
+    display: none;
+    width: calc(100% - 160px);
     margin: 0;
-    margin-left: 30px;
+    margin-top: 3px;
     padding: 0;
-    list-style: none;
     align-items: center;
-    justify-content: space-evenly;
     align-content: center;
+    justify-content: flex-start;
+    column-gap: 20px;
     flex-wrap: nowrap;
-    flex-direction: row;
-    column-gap: 30px;
+    overflow: visible;
 
     .desktopNavLink {
       color: $black;
       text-decoration: none;
       padding: 0 15px;
+      white-space: nowrap;
+      border-bottom: 4px solid transparent;
 
       &.activeDesktopNavLink,
       &:hover {
         font-weight: 600;
         border-bottom: 4px solid $default-brown;
-        // text-decoration: underline;
-        // text-decoration-color: $default-brown;
-        // text-underline-offset: 8  px;
-        // text-decoration-thickness: 4px;
+      }
+    }
+
+    .navDropdown {
+      position: relative;
+
+      &:hover .navDropdownContent,
+      .navDropdownContent:hover {
+        display: flex;
+      }
+
+      .desktopNavLink {
+        display: block;
+        line-height: 40px;
+      }
+
+      .navDropdownContent {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+
+        .desktopNavSubLink {
+          font-size: 16px;
+          color: $black;
+          text-decoration: none;
+          padding: 0;
+          white-space: nowrap;
+          border-bottom: 3px solid transparent;
+          line-height: 35px;
+
+          &.activeDesktopNavLink,
+          &:hover {
+            font-weight: 600;
+            border-bottom: 3px solid $default-brown;
+          }
+        }
       }
     }
   }
 
-  // TODO: update to display block when mobile nav ready
   .mobileNavigation {
     margin-top: 0;
     list-style: none;
-    display: none;
+    display: block;
   }
 }
 
@@ -77,5 +129,3 @@
     display: none;
   }
 }
-
-   

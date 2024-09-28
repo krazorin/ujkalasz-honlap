@@ -13,7 +13,7 @@ const PageLayout: FunctionComponent<Props> = ({ children }) => {
   return (
     <div className={styles.pageLayoutContainer}>
       <Header />
-      {children}
+      <div className={styles.content}>{children}</div>
       <Footer />
     </div>
   );
