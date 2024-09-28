@@ -1,15 +1,13 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react"
-
 import kalaszLogo from "src/assets/kalasz-logo.svg"
-
 import styles from "./Header.module.scss"
 import { NavLink } from "react-router-dom"
-// import NavBar from "../NavBarBootstrap/NavBar";
 
 interface NavItem {
   id: number
   label: string
   link: string
+  subItems?: NavItem[] // Optional sub-items for dropdowns
 }
 
 const desktopOtherLinkDropdownLabelkWidth = 150
@@ -31,9 +29,31 @@ const isLastItem = (array: unknown[], index: number) => {
 const navItems: NavItem[] = [
   { id: 1, label: "Hírek", link: "/" },
   { id: 2, label: "Programok", link: "/programok" },
-  { id: 3, label: "Bemutatkozás", link: "/bemutatkozas" },
+  {
+    id: 3,
+    label: "Bemutatkozás",
+    link: "/bemutatkozas",
+    subItems: [
+      { id: 301, label: "Történetünk", link: "/bemutatkozas/tortenetunk" },
+      { id: 302, label: "Vezérkönyv", link: "/bemutatkozas/vezerkonyv" },
+      { id: 303, label: "Alapszabály", link: "/bemutatkozas/alapszabaly" },
+      { id: 304, label: "Kapcsolataink", link: "/bemutatkozas/kapcsolataink" },
+    ],
+  },
   { id: 4, label: "Csoportjaink", link: "/csoportjaink" },
-  { id: 5, label: "Kiadványok", link: "/kiadvanyok" },
+  {
+    id: 5,
+    label: "Kiadványok",
+    link: "/kiadvanyok",
+    subItems: [
+      {
+        id: 501,
+        label: "ÚJ KALÁSZ újság",
+        link: "/kiadvanyok/uj-kalasz-ujsag",
+      },
+      { id: 502, label: "Egyéb kiadványok", link: "/kiadvanyok/egyeb" },
+    ],
+  },
   { id: 6, label: "Közösségi\u00A0ház", link: "/kozossegi-haz" },
   { id: 7, label: "Rólunk", link: "/rolunk" },
   { id: 8, label: "Galéria", link: "/galeria" },
@@ -59,13 +79,6 @@ const createDesktopNavLink = (
       key={`nav-item-${itemId}`}
       id={`nav-item-${itemId}`}
       to={path}
-      // className={({ isActive }) => {
-      //   if (isActive) {
-      //     classNames.push(styles.activeDesktopNavLink)
-      //   }
-
-      //   return classNames.join(" ")
-      // }}
       className={classNames.join(" ")}
     >
       {label}
@@ -118,12 +131,31 @@ const Header: FunctionComponent = () => {
       }
     }
 
-    // Initial call and event listener for resize
     handleResize()
     window.addEventListener("resize", handleResize)
 
     return () => window.removeEventListener("resize", handleResize)
   }, [])
+
+  const renderNavItemWithDropdown = (item: NavItem) => {
+    return (
+      <div className={styles.navDropdown} key={item.id}>
+        {createDesktopNavLink(item.id, item.label, item.link)}
+        {item.subItems && (
+          <div className={styles.navDropdownContent}>
+            {item.subItems.map((subItem) =>
+              createDesktopNavLink(
+                subItem.id,
+                subItem.label,
+                subItem.link,
+                true,
+              ),
+            )}
+          </div>
+        )}
+      </div>
+    )
+  }
 
   return (
     <div className={styles.container}>
@@ -134,7 +166,9 @@ const Header: FunctionComponent = () => {
         </div>
         <div className={styles.desktopNavigation} ref={containerRef}>
           {visibleItems.map((item) =>
-            createDesktopNavLink(item.id, item.label, item.link),
+            item.subItems
+              ? renderNavItemWithDropdown(item)
+              : createDesktopNavLink(item.id, item.label, item.link),
           )}
           {overflowItems.length > 0 && (
             <div className={styles.navDropdown}>
