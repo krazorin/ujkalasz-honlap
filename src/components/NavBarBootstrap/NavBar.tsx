@@ -1,28 +1,28 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import React, { useState, useEffect, useRef } from "react"
+import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 
 // import styles from "./NavBar.module.scss"; // Import SCSS Module
-import "./NavBar.scss";
+import "./NavBar.scss"
 
-import kalaszLogo from "src/assets/kalasz-logo.svg";
+import kalaszLogo from "src/assets/kalasz-logo.svg"
 
 interface NavLinkItem {
-  name: string;
-  url: string;
+  name: string
+  url: string
 }
 
 interface NavDropdownItem {
-  name: string;
-  items: NavLinkItem[];
+  name: string
+  items: NavLinkItem[]
 }
 
-type NavItem = NavLinkItem | NavDropdownItem;
+type NavItem = NavLinkItem | NavDropdownItem
 
 const NavBar: React.FC = () => {
-  const [visibleItems, setVisibleItems] = useState<NavItem[]>([]);
-  const [hiddenItems, setHiddenItems] = useState<NavItem[]>([]);
-  const navbarCollapseRef = useRef<HTMLDivElement>(null);
-  const [activeItem, setActiveItem] = useState<string>(""); // Change active item name based on actual active link
+  const [visibleItems, setVisibleItems] = useState<NavItem[]>([])
+  const [hiddenItems, setHiddenItems] = useState<NavItem[]>([])
+  const navbarCollapseRef = useRef<HTMLDivElement>(null)
+  const [activeItem, setActiveItem] = useState<string>("") // Change active item name based on actual active link
 
   const navItems: NavItem[] = [
     { name: "Hírek", url: "/news" },
@@ -46,38 +46,38 @@ const NavBar: React.FC = () => {
     },
     { name: "Galéria", url: "/gallery" },
     { name: "Elérhetőségek", url: "/contacts" },
-  ];
+  ]
 
   const calculateVisibleItems = () => {
     if (navbarCollapseRef.current) {
-      const navbarWidth = navbarCollapseRef.current.offsetWidth - 300;
-      const itemWidth = 120; // Assume each nav item takes up roughly this width
-      const maxVisibleItems = Math.floor(navbarWidth / itemWidth);
+      const navbarWidth = navbarCollapseRef.current.offsetWidth - 300
+      const itemWidth = 120 // Assume each nav item takes up roughly this width
+      const maxVisibleItems = Math.floor(navbarWidth / itemWidth)
 
       console.log({
         m: "calculateVisibleItems",
         width: navbarCollapseRef.current.offsetWidth,
         visible: navItems.slice(0, maxVisibleItems),
         hidden: navItems.slice(maxVisibleItems),
-      });
+      })
 
-      setVisibleItems(navItems.slice(0, maxVisibleItems));
-      setHiddenItems(navItems.slice(maxVisibleItems));
+      setVisibleItems(navItems.slice(0, maxVisibleItems))
+      setHiddenItems(navItems.slice(maxVisibleItems))
     }
-  };
+  }
 
   const handleResize = () => {
-    calculateVisibleItems();
-  };
+    calculateVisibleItems()
+  }
 
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    calculateVisibleItems();
+    window.addEventListener("resize", handleResize)
+    calculateVisibleItems()
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   return (
     <Navbar
@@ -116,7 +116,7 @@ const NavBar: React.FC = () => {
                     </NavDropdown.Item>
                   ))}
                 </NavDropdown>
-              );
+              )
             } else {
               // For regular links
               return (
@@ -129,7 +129,7 @@ const NavBar: React.FC = () => {
                 >
                   {item.name}
                 </Nav.Link>
-              );
+              )
             }
           })}
 
@@ -146,7 +146,7 @@ const NavBar: React.FC = () => {
                     <NavDropdown.ItemText key={index}>
                       <strong>{item.name}</strong>
                     </NavDropdown.ItemText>
-                  );
+                  )
                 }
                 // If the hidden item is a regular link
                 return (
@@ -157,14 +157,14 @@ const NavBar: React.FC = () => {
                   >
                     {item.name}
                   </NavDropdown.Item>
-                );
+                )
               })}
             </NavDropdown>
           )}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
