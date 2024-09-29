@@ -7,7 +7,7 @@ interface NavItem {
   id: number
   label: string
   link: string
-  subItems?: NavItem[] // Optional sub-items for dropdowns
+  subItems?: NavItem[]
 }
 
 const desktopOtherLinkDropdownLabelkWidth = 150
@@ -54,7 +54,7 @@ const navItems: NavItem[] = [
       { id: 502, label: "Egyéb kiadványok", link: "/kiadvanyok/egyeb" },
     ],
   },
-  { id: 6, label: "Közösségi\u00A0ház", link: "/kozossegi-haz" },
+  { id: 6, label: "Közösségi ház", link: "/kozossegi-haz" },
   { id: 7, label: "Rólunk", link: "/rolunk" },
   { id: 8, label: "Galéria", link: "/galeria" },
   { id: 9, label: "Elérhetőségeink", link: "/elerhetosegeink" },
@@ -66,20 +66,37 @@ const createDesktopNavLink = (
   path: string,
   isSubItem?: boolean,
 ) => {
-  const classNames: string[] = []
-
-  if (isSubItem) {
-    classNames.push(styles.desktopNavSubLink)
-  } else {
-    classNames.push(styles.desktopNavLink)
-  }
-
   return (
     <NavLink
       key={`nav-item-${itemId}`}
       id={`nav-item-${itemId}`}
       to={path}
-      className={classNames.join(" ")}
+      className={({ isActive }) => {
+        const classNames: string[] = []
+
+        if (isSubItem) {
+          classNames.push(styles.desktopNavSubLink)
+        } else {
+          classNames.push(styles.desktopNavLink)
+        }
+
+        if (isActive) {
+          classNames.push(styles.activeDesktopNavLink)
+        }
+
+        return classNames.join(" ")
+      }}
+    >
+      {label}
+    </NavLink>
+  )
+}
+
+const createMobileNavLink = (label: string, path: string) => {
+  return (
+    <NavLink
+      to={path}
+      className={({ isActive }) => (isActive ? styles.activeMobileLink : "")}
     >
       {label}
     </NavLink>
@@ -90,6 +107,9 @@ const Header: FunctionComponent = () => {
   const [visibleItems, setVisibleItems] = useState<NavItem[]>(navItems)
   const [overflowItems, setOverflowItems] = useState<NavItem[]>([])
   const containerRef = useRef<HTMLDivElement>(null)
+
+  // State for handling the mobile menu toggle
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -157,6 +177,10 @@ const Header: FunctionComponent = () => {
     )
   }
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return (
     <div className={styles.container}>
       <nav className={styles.navigation}>
@@ -164,6 +188,8 @@ const Header: FunctionComponent = () => {
           <img src={`${kalaszLogo}`} alt="Kalász logo" />
           <span>KALÁSZ</span>
         </div>
+
+        {/* Desktop Navigation */}
         <div className={styles.desktopNavigation} ref={containerRef}>
           {visibleItems.map((item) =>
             item.subItems
@@ -181,17 +207,33 @@ const Header: FunctionComponent = () => {
             </div>
           )}
         </div>
-        <ul className={styles.mobileNavigation}>
-          <li>Mobile Hírek</li>
-          <li>Programok</li>
-          <li>Bemutatkozás</li>
-          <li>Csoportjaink</li>
-          <li>Kiadványok</li>
-          <li>Közösségi ház</li>
-          <li>Rólunk</li>
-          <li>Galéria</li>
-          <li>Elérhetőségeink</li>
-        </ul>
+
+        {/* Mobile Navigation */}
+        <div className={styles.mobileNavigation}>
+          {/* Burger Icon for Mobile Menu */}
+          <div className={styles.burgerIcon} onClick={toggleMobileMenu}>
+            <span className={isMobileMenuOpen ? styles.open : ""}>☰</span>
+          </div>
+
+          {isMobileMenuOpen && (
+            <ul className={styles.mobileMenu}>
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  {createMobileNavLink(item.label, item.link)}
+                  {item.subItems && (
+                    <ul className={styles.mobileSubMenu}>
+                      {item.subItems.map((subItem) => (
+                        <li key={subItem.id}>
+                          {createMobileNavLink(subItem.label, subItem.link)}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </nav>
     </div>
   )

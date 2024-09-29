@@ -101,13 +101,84 @@
   }
 
   .mobileNavigation {
-    margin-top: 0;
-    list-style: none;
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    position: relative;
+    font-size: 18px;
+
+    .burgerIcon {
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      font-size: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      span {
+        width: 100%;
+        height: 3px;
+        transition: 0.3s ease-in-out;
+      }
+
+      &.open span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+
+      &.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.open span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+
+    .mobileMenu {
+      padding: 30px;
+      margin: 0;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 70%;
+      background-color: $white;
+      box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      list-style: none;
+      text-align: left;
+
+      .activeMobileLink {
+        font-weight: 600;
+        text-decoration: underline 4px solid $default-brown;
+        text-underline-offset: 10px;
+      }
+
+      li {
+        padding: 5px 0;
+
+        a {
+          text-decoration: none;
+          color: $black;
+          display: block;
+        }
+
+        .mobileSubMenu {
+          list-style: none;
+          padding-left: 30px;
+
+          li {
+            padding: 5px 0;
+          }
+        }
+      }
+    }
   }
 }
 
-// desktop
+// Media query for desktop
 @media (min-width: $min-width-tablet) {
   .navigation .desktopNavigation {
     display: flex;
