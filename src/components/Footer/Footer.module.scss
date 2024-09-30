@@ -3,19 +3,23 @@
 .container {
   font-family: "Inter";
   width: 100%;
-  height: 150px;
+  min-height: 150px;
   background-color: $default-orange;
   position: fixed;
   bottom: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   font-size: 16px;
+  font-weight: 300;
 
   .contact {
+    min-width: 300px;
     text-align: left;
-    padding-left: 30px;
+    padding: 20px;
+    padding-bottom: 0px;
 
     a {
       text-decoration: none;
@@ -29,6 +33,68 @@
     .address {
       margin: 0;
       margin-top: 20px;
+    }
+  }
+
+  .supporters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+
+    .title {
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 5px;
+      row-gap: 5px;
+
+      img {
+        height: 55px;
+
+        &.withBackground {
+          height: 51px;
+          background-color: $white;
+          padding: 2px;
+        }
+      }
+    }
+  }
+}
+ 
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+  .container {
+    align-items: center;
+    flex-direction: row;
+
+    .contact {
+      padding: 10px 30px;
+      padding-right: 0;
+    }
+
+    .supporters {
+      padding: 10px 30px;
+      padding-left: 0;
+      align-items: flex-end;
+
+      ul {
+        justify-content: flex-end;
+
+        img {
+          height: 60px;
+  
+          &.withBackground {
+            height: 56px;
+          }
+        }
+      }
     }
   }
 }
