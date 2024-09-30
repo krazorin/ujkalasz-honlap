@@ -5,4 +5,5 @@ body, html {
   min-width: 320px;
   min-height: 100vh;
   place-items: center;
+  font-family: "Inter";
 }

@@ -55,7 +55,7 @@ const navItems: NavItem[] = [
     ],
   },
   { id: 6, label: "Közösségi ház", link: "/kozossegi-haz" },
-  { id: 7, label: "Rólunk", link: "/rolunk" },
+  // { id: 7, label: "Rólunk", link: "/rolunk" },
   { id: 8, label: "Galéria", link: "/galeria" },
   { id: 9, label: "Elérhetőségeink", link: "/elerhetosegeink" },
 ]
