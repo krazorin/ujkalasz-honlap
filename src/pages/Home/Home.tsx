@@ -1,9 +1,13 @@
 import { FunctionComponent } from "react"
+
 import PageLayout from "src/components/PageLayout/PageLayout"
+
+import styles from "./Home.module.scss"
 
 const Home: FunctionComponent = () => {
   return (
     <PageLayout>
+      <div className={styles.homePage}></div>
       <h1>Isten hozta a Kalászban!</h1>
       <ul>
         <li>Hír 1</li>
