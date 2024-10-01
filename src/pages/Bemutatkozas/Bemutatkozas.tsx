@@ -125,12 +125,26 @@ const Bemutatkozas: FunctionComponent = () => {
         Annamária, titkára Szabó Lászlóné Magyar Anna. <br />
         <br />
         <b>Katolikus Asszonyok - Lányok Szövetsége</b> <br />
-        <b>Kalász Központ:</b> 1122. Budapest, Hajnóczy utca 10. I/9. <br />
-        <b>Telefon/fax:</b> +361/356-4534 <br />
-        <b>E-mail:</b>
+        <b>Kalász Központ:</b>{" "}
+        <a
+          href="https://www.google.com/maps/place/Budapest,+Hajn%C3%B3czy+J%C3%B3zsef+u.+10,+1122+Hungary/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          1122 Budapest Hajnóczy utca 10. I/9.
+        </a>
+        <br />
+        <b>Telefon/fax:</b> <a href="tel:tel:+3613564534">+361/356-4534</a>{" "}
+        <br />
+        <b>E-mail:</b>{" "}
         <a href="mailto:kalasz@kalasz.t-online.hu">kalasz@kalasz.t-online.hu</a>
         <br />
-        <b>Honlap:</b> www.ujkalasz.hu <br />
+        <b>Honlap:</b>{" "}
+        <a href="www.ujkalasz.hu" target="_blank" rel="noopener noreferrer">
+          www.ujkalasz.hu
+        </a>
+        <br />
+        <br />
       </p>
     </PageLayout>
   )
