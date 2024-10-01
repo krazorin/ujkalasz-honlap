@@ -27,148 +27,137 @@ const Footer: FunctionComponent = () => {
       </div>
       <div className={styles.supporters}>
         <p className={styles.title}>Támogatóink</p>
-        <ul>
-          <li>
-            <a
-              href="https://kormany.hu/miniszterelnokseg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className={styles.withBackground}
-                src="/assets/images/supporters/miniszterelnokseg.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://bgazrt.hu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className={styles.withBackground}
-                src="/assets/images/supporters/bethlen_gabor_alapkezelo.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://civil.info.hu/nea/kezdolap/bemutatkozas/index.html"
-              target="_blank"
-            >
-              <img src="/assets/images/supporters/NEA_2813.png" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://csalad.hu/rolunk/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                alt="CSBO-logo_szines.jpg"
-                src="/assets/images/supporters/CSBO-logo_szines.jpg"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://katolikus.hu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/assets/images/supporters/magyar_katolikus_puspokkari_konferencia.jpg" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.wucwo.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/assets/images/supporters/wucwo.png" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.nepfolakitelek.hu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/assets/images/supporters/lakitelek_nepfoiskola.jpg" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://www.szentkiraly.hu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className={styles.withBackground}
-                src="/assets/images/supporters/szentkiraly_kozseg.jpg"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://kapolnasnyek.hu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className={styles.withBackground}
-                src="/assets/images/supporters/kapolnasnyek.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://www.masodikkerulet.hu/fooldal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                alt="budapest_2_ker.bmp"
-                src="/assets/images/supporters/budapest_2_ker.bmp"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.hegyvidek.hu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                alt="budapest_12_ker.bmp"
-                src="/assets/images/supporters/budapest_12_ker.bmp"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.varosmajoriplebania.hu/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className={styles.withBackground}
-                src="/assets/images/supporters/varosmajor.bmp"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://orszagutiferencesek.hu/elerhetoseg-kapcsolat/filiak/krisztus-kiraly-filia/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="/assets/images/supporters/krisztus_kiraly_templomigazgatosag.bmp" />
-            </a>
-          </li>
-        </ul>
+        <div className={styles.supporterLogos}>
+          <a
+            href="https://kormany.hu/miniszterelnokseg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles.withBackground}
+              src="/assets/images/supporters/miniszterelnokseg.png"
+            />
+          </a>
+          <a
+            href="https://bgazrt.hu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles.withBackground}
+              src="/assets/images/supporters/bethlen_gabor_alapkezelo.png"
+            />
+          </a>
+          <a
+            href="https://civil.info.hu/nea/kezdolap/bemutatkozas/index.html"
+            target="_blank"
+          >
+            <img src="/assets/images/supporters/NEA_2813.png" />
+          </a>
+          <a
+            href="https://csalad.hu/rolunk/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="CSBO-logo_szines.jpg"
+              src="/assets/images/supporters/CSBO-logo_szines.jpg"
+            />
+          </a>
+          <a
+            href="https://katolikus.hu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/assets/images/supporters/magyar_katolikus_puspokkari_konferencia.jpg" />
+          </a>
+          <a
+            href="https://www.wucwo.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/assets/images/supporters/wucwo.png" />
+          </a>
+          <a
+            href="https://www.nepfolakitelek.hu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/assets/images/supporters/lakitelek_nepfoiskola.jpg" />
+          </a>
+          <a
+            href="http://www.szentkiraly.hu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles.withBackground}
+              src="/assets/images/supporters/szentkiraly_kozseg.jpg"
+            />
+          </a>
+          <a
+            href="http://kapolnasnyek.hu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles.withBackground}
+              src="/assets/images/supporters/kapolnasnyek.png"
+            />
+          </a>
+          <a
+            href="http://www.masodikkerulet.hu/fooldal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="budapest_2_ker.bmp"
+              src="/assets/images/supporters/budapest_2_ker.bmp"
+            />
+          </a>
+          <a
+            href="https://www.hegyvidek.hu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              alt="budapest_12_ker.bmp"
+              src="/assets/images/supporters/budapest_12_ker.bmp"
+            />
+          </a>
+          <a
+            href="https://www.varosmajoriplebania.hu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className={styles.withBackground}
+              src="/assets/images/supporters/varosmajor.bmp"
+            />
+          </a>
+          <a
+            href="https://orszagutiferencesek.hu/elerhetoseg-kapcsolat/filiak/krisztus-kiraly-filia/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/assets/images/supporters/krisztus_kiraly_templomigazgatosag.bmp" />
+          </a>
+        </div>
+        {/* <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul> */}
       </div>
     </div>
   )
