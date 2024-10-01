@@ -1,0 +1,31 @@
+@import "src/styles/_variables";
+
+.elerhetosegeink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  .map {
+    img {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}
+
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+  .elerhetosegeink {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 20px;
+  }
+}
