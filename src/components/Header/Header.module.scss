@@ -45,7 +45,6 @@
 
     .desktopNavLink {
       color: $black;
-      text-decoration: none;
       padding: 0 15px;
       white-space: nowrap;
       border-bottom: 4px solid transparent;
@@ -53,7 +52,7 @@
       &.activeDesktopNavLink,
       &:hover {
         font-weight: 600;
-        border-bottom: 4px solid $default-brown;
+        border-bottom: 4px solid $default-burgundy;
       }
     }
 
@@ -85,7 +84,6 @@
         .desktopNavSubLink {
           font-size: 16px;
           color: $black;
-          text-decoration: none;
           padding: 0;
           white-space: nowrap;
           border-bottom: 3px solid transparent;
@@ -94,7 +92,7 @@
           &.activeDesktopNavLink,
           &:hover {
             font-weight: 600;
-            border-bottom: 3px solid $default-brown;
+            border-bottom: 3px solid $default-burgundy;
           }
         }
       }
@@ -152,7 +150,7 @@
 
       .activeMobileLink {
         font-weight: 600;
-        text-decoration: underline 4px solid $default-brown;
+        text-decoration: underline 4px solid $default-burgundy;
         text-underline-offset: 10px;
       }
 
@@ -160,7 +158,6 @@
         padding: 5px 0;
 
         a {
-          text-decoration: none;
           color: $black;
           display: block;
         }

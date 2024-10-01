@@ -8,6 +8,9 @@ const Vezerkonyv: FunctionComponent = () => {
   return (
     <PageLayout>
       <div className={styles.vezerkonyv}>
+        <h1>
+          <center>Vezérkönyv</center>
+        </h1>
         <p>
           A <strong>Vezérkönyv</strong> tananyagnak készült a Vezetőképző
           résztvevői számára. A betiltás idején nagy részét eldugdosták,
