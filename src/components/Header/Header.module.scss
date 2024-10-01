@@ -3,7 +3,7 @@
 .container {
   width: 100%;
   background-color: $white;
-  box-shadow: 0px 16px 40px 10px rgba(122, 118, 118, 0.08);
+  box-shadow: 0px 16px 40px 10px $shadow-colour;
   z-index: 20;
 }
 
@@ -80,7 +80,7 @@
         position: absolute;
         top: 100%;
         background-color: $white;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 8px 16px 0px $shadow-colour;
 
         .desktopNavSubLink {
           font-size: 16px;
@@ -145,7 +145,7 @@
       right: 10px;
       bottom: 10px;
       background-color: $white;
-      box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: -10px 10px 20px 0px $shadow-colour;
       list-style: none;
       text-align: left;
       overflow-y: auto;

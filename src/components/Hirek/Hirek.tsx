@@ -289,10 +289,15 @@ const renderNewsItem = (item: NewsItem) => {
 
   return (
     <div className={styles.textNewsContainer}>
-      {" "}
-      <div
-        dangerouslySetInnerHTML={{ __html: item.text as TrustedHTML }}
-      ></div>{" "}
+      <div className={styles.textNewsContent}>
+        <div className={styles.textNewsHeader}>
+          <p className={styles.textNewsHeaderTitle}>{item.title}</p>
+          <p className={styles.textNewsHeaderDate}>{item.date}</p>
+        </div>{" "}
+        <div
+          dangerouslySetInnerHTML={{ __html: item.text as TrustedHTML }}
+        ></div>{" "}
+      </div>
     </div>
   )
 }
