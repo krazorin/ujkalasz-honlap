@@ -1,0 +1,51 @@
+@import "src/styles/_variables";
+
+.container {
+  padding-bottom: 30px;
+
+  h1 {
+    text-align: center;
+  }
+
+  p.cim {
+    text-decoration: underline;
+    margin-top: 0;
+  }
+
+  .szovegekKeppel {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+
+    img {
+      max-width: 12rem;
+      max-height: 12rem;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .csoportKepKontener{
+    text-align: center;
+    padding-bottom: 30px;
+
+    img {
+      max-width: 25rem;
+      max-height: 20rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // .szovegek {}
+  // .szovegekKeppel {}
+  // .csoportKepKontener {
+
+  // }
+}
+
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+}

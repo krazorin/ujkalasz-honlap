@@ -1,0 +1,24 @@
+@import "src/styles/_variables";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .csoportBemutatkozasok {
+    max-width: 1000px;
+
+    .csoportOsszefoglalo {
+      padding-bottom: 15px;
+    }
+  }
+
+  .csoportLista {
+    max-width: 1000px;
+  }
+}
+
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+}

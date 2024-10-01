@@ -20,16 +20,6 @@
       li {
         margin-bottom: 10px; // Space between the items
       }
-
-      a {
-        text-decoration: none;
-        color: $black;
-        font-style: italic;
-
-        &:hover {
-          color: $default-brown;
-        }
-      }
     }
   }
 

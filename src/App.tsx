@@ -8,8 +8,11 @@ import Alapszabaly from "./pages/Bemutatkozas/Alapszabaly"
 import Kapcsolataink from "./pages/Bemutatkozas/Kapcsolataink"
 import Programok from "./pages/Programok/Programok"
 import Elerhetosegeink from "./pages/Elerhetosegeink/Elerhetosegeink"
+import Csoportjaink, {
+  csoportokRoutes,
+} from "./pages/Csoportjaink/Csoportjaink"
 
-import "src/App.css"
+import "src/App.scss"
 
 function App() {
   return (
@@ -25,6 +28,8 @@ function App() {
         <Route path="/bemutatkozas/kapcsolataink" element={<Kapcsolataink />} />
         <Route path="/programok" element={<Programok />} />
         <Route path="/elerhetosegeink" element={<Elerhetosegeink />} />
+        <Route path="/csoportjaink" element={<Csoportjaink />} />
+        {csoportokRoutes}
 
         <Route path="*" element={<Home />} />
       </Routes>
@@ -33,3 +38,14 @@ function App() {
 }
 
 export default App
+
+// bp-krisztus-kiraly BpKrisztusKiraly
+// papa
+// egerbatak
+// szeged
+// bp-sashalom
+// szombathely
+// valko
+// pannonhalma
+// mogyorod
+// nagykata
