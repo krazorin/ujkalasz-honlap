@@ -7,9 +7,9 @@ import Vezerkonyv from "./pages/Bemutatkozas/Vezerkonyv"
 import Alapszabaly from "./pages/Bemutatkozas/Alapszabaly"
 import Kapcsolataink from "./pages/Bemutatkozas/Kapcsolataink"
 import Programok from "./pages/Programok/Programok"
+import Elerhetosegeink from "./pages/Elerhetosegeink/Elerhetosegeink"
 
 import "src/App.css"
-import Elerhetosegeink from "./pages/Elerhetosegeink/elerhetosegeink"
 
 function App() {
   return (
