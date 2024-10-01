@@ -1,7 +1,9 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react"
-import kalaszLogo from "src/assets/kalasz-logo.svg"
-import styles from "./Header.module.scss"
 import { NavLink } from "react-router-dom"
+
+import kalaszLogo from "src/assets/kalasz-logo.svg"
+
+import styles from "./Header.module.scss"
 
 interface NavItem {
   id: number
