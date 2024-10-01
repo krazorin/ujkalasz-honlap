@@ -177,7 +177,7 @@ const Header: FunctionComponent = () => {
           )}
           {overflowItems.length > 0 && (
             <div className={styles.navDropdown}>
-              {createNavLink(100, "továbbiak", "")}
+              {createNavLink(100, "továbbiak", "/tovabbiak")}
               <div className={styles.navDropdownContent}>
                 {overflowItems.map((item) =>
                   createNavLink(item.id, item.label, item.link, true),

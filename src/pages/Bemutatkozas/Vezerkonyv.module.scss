@@ -1,0 +1,202 @@
+@import "src/styles/_variables";
+
+.vezerkonyv {
+  .tartalomjegyzek {
+    columns: 1; 
+    padding: 0 100px;
+    padding-top: 20px;
+    column-gap: 100px;
+
+    .tartalomjegyzekFejezet {
+      break-inside: avoid; // Prevents breaking inside list items
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        margin-bottom: 10px; // Space between the items
+      }
+
+      a {
+        text-decoration: none;
+        color: $black;
+        font-style: italic;
+
+        &:hover {
+          color: $default-brown;
+        }
+      }
+    }
+  }
+
+  .tartalom {
+    .vezerkonyvKep {
+      padding: 3px;
+      border: 3px solid #A22551;
+      border-radius: 10px;
+
+      &.balSzovegIllusztracio {
+        float: left;
+        margin: 10px;
+      }
+
+      &.jobbSzovegIllusztracio {
+        float: right;
+        margin: 10px;
+      }
+    }
+
+    .noMarginOrderdList {
+      margin: 0;
+    }
+
+    .indentedOrderdList {
+      margin-top: 0;
+      margin-left: 35px;
+    }
+
+    ul { 
+      list-style: none;
+    }
+
+    p.cim1 {
+      font-weight: bold;
+      margin: 0px;
+      margin-bottom: 32px;
+      margin-top: 48px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    p.cim2 {
+      font-weight: bold;
+      margin: 0px;
+      margin-bottom: 0pt;
+      margin-top: 32px;
+      text-align: center;
+      font-size: 18px;
+
+      &.cim2BottomMargin {
+        margin-bottom: 16px;
+      }
+
+      &.cim2NoMarginTop {
+        margin-top: 0
+      }
+    }
+
+    p.cim3 {
+      font-weight: bold;
+      margin: 0px;
+      margin-bottom: 6pt;
+      margin-top: 16px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    p.cim4 {
+      font-style: italic;
+      margin: 0px;
+      margin-bottom: 8px;
+      margin-top: 16px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    p.alcim1 {
+      font-weight: bold;
+      margin: 0px;
+      margin-bottom: 8px;
+      margin-top: 16px;
+      text-align: left;
+
+      &.alcim1NoBottomMargin {
+        margin-bottom: 0;
+      }
+    }
+
+    p.alcim2 {
+      font-style: italic;
+      margin: 0px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    p.alcim3 {
+      font-style: italic;
+      margin: 0px;
+      margin-bottom: 4px;
+      margin-top: 8px;
+      margin-left: 35px;
+      text-align: left;
+    }
+
+    p.torzs {
+      text-indent: 35px;
+      margin: 0px;
+      text-align: justify;
+
+      &.torzsMarginTop {
+        margin-top: 21px;
+      }
+
+      &.torzsInvertedIndentation {
+        margin-left: 70px; 
+        text-indent: -35px;
+      }
+
+      &.torzsNoIndentation {
+        text-indent: 0;
+      }
+
+      &.torzsLeft35px {
+        margin-left: 35px;
+      }
+
+      &.torzsLeft70px {
+        margin-left: 70px;
+      }
+    }
+
+    p.torzs2 {
+      text-indent: -35px;
+      margin: 0pt;
+      margin-left: 35px;
+      text-align: justify;
+    }
+
+    p.torzs3 {
+      margin: 0;
+      margin-left: 33px;
+      text-align: justify;
+    }
+
+    .alairas {
+      display: flex;
+      justify-content: flex-end;
+      text-align: center;
+      padding-right: 50px;
+    }
+
+    .duplaAlairas {
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+  }
+}
+
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+  .vezerkonyv {
+    .tartalomjegyzek {
+      columns: 2;
+    }
+  }
+}
