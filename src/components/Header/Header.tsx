@@ -53,11 +53,32 @@ const navItems: NavItem[] = [
         label: "ÚJ KALÁSZ újság",
         link: "/kiadvanyok/uj-kalasz-ujsag",
       },
-      { id: 502, label: "Egyéb kiadványok", link: "/kiadvanyok/egyeb" },
+      // { id: 502, label: "Egyéb kiadványok", link: "/kiadvanyok/egyeb" },
     ],
   },
-  { id: 6, label: "Közösségi ház", link: "/kozossegi-haz" },
-  // { id: 7, label: "Rólunk", link: "/rolunk" },
+  {
+    id: 6,
+    label: "Váci KALÁSZ-ház",
+    link: "/vaci-kalasz-haz",
+    subItems: [
+      {
+        id: 601,
+        label: "Vendégek tudnivalói",
+        link: "/vaci-kalasz-haz/tudnivalok",
+      },
+      {
+        id: 602,
+        label: "Képek",
+        link: "/vaci-kalasz-haz/kepek",
+      },
+      {
+        id: 603,
+        label: "Áraink",
+        link: "/vaci-kalasz-haz/arak",
+      },
+    ],
+  },
+  { id: 7, label: "Rólunk", link: "/rolunk" },
   { id: 8, label: "Galéria", link: "/galeria" },
   { id: 9, label: "Elérhetőségeink", link: "/elerhetosegeink" },
 ]

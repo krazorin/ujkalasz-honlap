@@ -10,7 +10,7 @@ const Elerhetosegeink: FunctionComponent = () => {
       <div className={styles.elerhetosegeink}>
         <div className={styles.map}>
           <a
-            href="https://www.google.com/maps/place/Budapest,+Hajn%C3%B3czy+J%C3%B3zsef+u.+10,+1122+Hungary/"
+            href="https://www.google.com/maps/place/Budapest,+Maros+utca+26,+1122"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -18,32 +18,46 @@ const Elerhetosegeink: FunctionComponent = () => {
           </a>
         </div>
         <div className={styles.details}>
+          <p>A KALÁSZ központi irodájának elérhetőségei:</p>
           <p>
-            KALÁSZ országos elnöke Fekésházy Kinga, alelnöke Tóth Krisztina,
-            titkára Vlasitsné Párkányi Györgyi.
+            <strong>Honlap:</strong>{" "}
+            <a href="www.ujkalasz.hu">www.ujkalasz.hu</a>
           </p>
           <p>
-            <strong>A Kalász Központ címe:</strong>{" "}
+            <strong>Cím:</strong>{" "}
             <a
-              href="https://www.google.com/maps/place/Budapest,+Hajn%C3%B3czy+J%C3%B3zsef+u.+10,+1122+Hungary/"
+              href="https://www.google.com/maps/place/Budapest,+Maros+utca+26,+1122"
               target="_blank"
               rel="noopener noreferrer"
             >
-              1122 Budapest Hajnóczy utca 10. I/9.
-            </a>
-            <br />
-            <strong>E-mail:</strong>{" "}
-            <a href="mailto:kalasz@kalasz.t-online.hu">
-              kalasz@kalasz.t-online.hu
+              1122 Budapest, Maros utca 26.
             </a>
           </p>
           <p>
+            <strong>Telefonszám:</strong>{" "}
+            <a href="tel:+3613564534">06-1-356-4534</a>
+          </p>
+          <p>
+            <strong>E-mail:</strong>{" "}
+            <a href="mailto:kalasz@ujkalasz.hu">kalasz@ujkalasz.hu</a>
+          </p>
+          <p>
+            <strong>Facebook:</strong>{" "}
+            <a
+              href="https://www.facebook.com/ujkalasz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://www.facebook.com/ujkalasz
+            </a>
+          </p>
+          {/* <p>
             <strong>Adószám:</strong> 19639446-1-43
             <br />
             <strong>Bankszámlaszám:</strong> 11711034-20428109
             <br />
             <strong>IBAN:</strong> HU48 11711034-20428109
-          </p>
+          </p> */}
         </div>
       </div>
     </PageLayout>

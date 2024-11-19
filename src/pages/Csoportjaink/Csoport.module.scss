@@ -8,7 +8,8 @@
   }
 
   p.cim {
-    text-decoration: underline;
+    // text-decoration: underline;
+    font-weight: bold;
     margin-top: 0;
   }
 
@@ -38,12 +39,6 @@
       margin-bottom: 0.5rem;
     }
   }
-
-  // .szovegek {}
-  // .szovegekKeppel {}
-  // .csoportKepKontener {
-
-  // }
 }
 
 // Media query for desktop

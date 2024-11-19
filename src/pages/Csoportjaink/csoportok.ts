@@ -195,31 +195,31 @@ const csoportok: Csoport[] = [
       {
         cim: "Csoportvezető bemutatkozása:",
         szoveg: [
-          "Csehné Vadnai Bori vagyok, Budapesten, Sashalmon élek férjemmel és két kisfiunkkal: Gyuszi 9, Jancsi 5 éves. Európai uniós pályázatokat kezelek a Miniszterelnöki Kabinetirodán. Szabadidőmben sokat olvasok.",
+          "Csehné Vadnai Borbála vagyok, Budapesten, Sashalmon élek férjemmel és két kisfiunkkal, Gyuszival és Jancsival. Nemzetközi kapcsolatok szakon végzett közgazdász vagyok.",
         ],
       },
       {
         cim: "Mióta létezik a csoport? Milyen gyakran, mikor és hol találkozik a csoport?",
         szoveg: [
-          "2020 szeptemberében indítottuk el a Sashalmi Keresztény Női Kört, elsősorban a Sashalmi Krisztus Király Plébánia hívei számára, de máshonnan is érkeztek hozzánk tagok. Kéthetente hétfőnként délután 6-tól fél 8-ig tartanak az alkalmak. Plébános atya kérésére, bármilyen jól is érezzük magunkat együtt, mindig szigorúan betartjuk, hogy fél 8-kor visszatérünk a családjainkhoz, nehogy hiányoljanak minket otthon.",
+          "2020 szeptemberében indítottuk el a Sashalmi Keresztény Női Kört, elsősorban a Sashalmi Krisztus Király Plébánia hívei számára, de máshonnan is érkeztek hozzánk tagok. Kéthetente hétfőnként délután 6-tól fél 8-ig tartanak az alkalmak plébániánk közösségi házában. Plébános atya kérésére, bármilyen jól is érezzük magunkat együtt, mindig szigorúan betartjuk, hogy fél 8-kor visszatérünk a családjainkhoz, nehogy hiányoljanak minket otthon.",
         ],
       },
       {
         cim: "Hány tagja van a csoportnak? Milyen korosztály?",
         szoveg: [
-          "Jelenleg 20 tagunk van, ebből csak én vagyok KALÁSZ-tag. Érdekes módon az átlagéletkor nagyjából az én életkorom, tehát 40 év körüli, jellemzően kisebb – nagyobb gyerekes anyukák vagyunk. De van néhány fiatalos nyugdíjas tagunk is.",
+          "Jelenleg 60 tagunk van, ebből csak én vagyok KALÁSZ-tag. A találkozókra 25-30 tag szokott eljönni. Érdekes módon az átlagéletkor nagyjából az én életkorom, tehát 40 év körüli, jellemzően kisebb – nagyobb gyerekes anyukák vagyunk. De van néhány fiatalos nyugdíjas tagunk is.",
         ],
       },
       {
         cim: "Mi jellemzi a csoportotokat, a találkozóitokat?",
         szoveg: [
-          "A Női Kör kimondott célja, hogy egymást erősítve női közösséget építsünk, ahol megosztjuk az életünk számos területével kapcsolatos tapasztalatainkat és együtt haladjunk keresztény utunkon. A csoportban teljes az egymás elfogadása, nem kritizáljuk egymást, nem osztunk kéretlen tanácsokat, hanem szeretettel és figyelemmel fordulunk egymás felé.  Időnként vendégelőadókat is hívunk. Találkozóinkon éneklünk, imádkozunk és különböző keresztény női létünkkel kapcsolatos témákról beszélgetünk.",
+          "A Női Kör kimondott célja, hogy egymást erősítve női közösséget építsünk, ahol megosztjuk az életünk számos területével kapcsolatos tapasztalatainkat és együtt haladjunk keresztény utunkon. A csoportban teljes az egymás elfogadása, nem kritizáljuk egymást, nem osztunk kéretlen tanácsokat, hanem szeretettel és figyelemmel fordulunk egymás felé. Gyakran hívunk vendégelőadókat minket érdeklő témákban. Találkozóinkon éneklünk, imádkozunk és különböző keresztény női létünkkel kapcsolatos témákról beszélgetünk.",
         ],
       },
       {
         cim: "A csoporttalálkozókon kívül mit csinál még a közösség?",
         szoveg: [
-          "Azon a hétfőn, amikor nincs találkozónk, akkor egyik tagunk vezetésével közös gyaloglást tartunk a közeli parkban, ahol a jó levegő és mozgás mellett kötetlenebb módon tudunk kapcsolódni egymáshoz. Szép közös emlékünk a Nagyböjtből, hogy még a lezárások előtt volt alkalma Női Körünknek keresztutat vezetni templomunkban. 2021. május 29-én lélekemelő KALÁSZ lelki napot szerveztünk.",
+          "Anya-ima csoportot hoztunk létre. Évente egyszer lelki napot és egyszer elvonulást szervezünk. Aktívan bekapcsolódunk plébániánk életébe.",
         ],
       },
       {

@@ -32,4 +32,8 @@
       background-color: $default-burgundy;
     }
   }
+
+  ul.dash-list {
+    list-style-type: '- ';
+  }
 }
