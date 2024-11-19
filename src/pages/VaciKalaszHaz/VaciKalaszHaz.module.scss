@@ -1,0 +1,44 @@
+@import "src/styles/_variables";
+
+.container {
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    .headerText {
+      min-width: 190px;
+      padding: 0 10px;
+    }
+
+    .headerImageContainer {
+      height: 70px;
+
+      img {
+        width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .content {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 20px;
+
+    ul {
+      list-style-type: none;
+    }
+  }
+}
+
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+  .container .header {
+    .headerImageContainer {
+      height: 150px;
+    }
+  }
+   
+}
