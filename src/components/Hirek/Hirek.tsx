@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react"
+import { v4 as uuidv4 } from "uuid"
 
 import styles from "./Hirek.module.scss"
 
@@ -278,7 +279,7 @@ const newsItems: NewsItem[] = [
 const renderNewsItem = (item: NewsItem) => {
   if (item.type === "image") {
     return (
-      <div className={styles.imageNewsContainer}>
+      <div className={styles.imageNewsContainer} key={uuidv4()}>
         <img
           alt={item.imageUrl}
           src={`/assets/images/hirek/${item.imageUrl}`}
@@ -288,7 +289,7 @@ const renderNewsItem = (item: NewsItem) => {
   }
 
   return (
-    <div className={styles.textNewsContainer}>
+    <div className={styles.textNewsContainer} key={uuidv4()}>
       <div className={styles.textNewsContent}>
         <div className={styles.textNewsHeader}>
           <p className={styles.textNewsHeaderTitle}>{item.title}</p>

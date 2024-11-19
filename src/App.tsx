@@ -8,6 +8,12 @@ import Alapszabaly from "./pages/Bemutatkozas/Alapszabaly"
 import Kapcsolataink from "./pages/Bemutatkozas/Kapcsolataink"
 import Programok from "./pages/Programok/Programok"
 import Elerhetosegeink from "./pages/Elerhetosegeink/Elerhetosegeink"
+import Rolunk from "./pages/Rolunk/Rolunk"
+import Kiadvanyok from "./pages/Kiadvanyok/Kiadvanyok"
+import VaciKalaszHaz from "./pages/VaciKalaszHaz/VaciKalaszHaz"
+import VaciKalaszHazArak from "./pages/VaciKalaszHaz/VaciKalaszHazArak"
+import VaciKalaszHazKepek from "./pages/VaciKalaszHaz/VaciKalaszHazKepek"
+import VaciKalaszHazTudnivalok from "./pages/VaciKalaszHaz/VaciKalaszHazTudnivalok"
 import Csoportjaink, {
   csoportokRoutes,
 } from "./pages/Csoportjaink/Csoportjaink"
@@ -29,6 +35,15 @@ function App() {
         <Route path="/programok" element={<Programok />} />
         <Route path="/elerhetosegeink" element={<Elerhetosegeink />} />
         <Route path="/csoportjaink" element={<Csoportjaink />} />
+        <Route path="/rolunk" element={<Rolunk />} />
+        <Route path="/kiadvanyok" element={<Kiadvanyok />} />
+        <Route path="/vaci-kalasz-haz" element={<VaciKalaszHaz />} />
+        <Route
+          path="/vaci-kalasz-haz/tudnivalok"
+          element={<VaciKalaszHazTudnivalok />}
+        />
+        <Route path="/vaci-kalasz-haz/kepek" element={<VaciKalaszHazKepek />} />
+        <Route path="/vaci-kalasz-haz/arak" element={<VaciKalaszHazArak />} />
         {csoportokRoutes}
 
         <Route path="*" element={<Home />} />
@@ -38,14 +53,3 @@ function App() {
 }
 
 export default App
-
-// bp-krisztus-kiraly BpKrisztusKiraly
-// papa
-// egerbatak
-// szeged
-// bp-sashalom
-// szombathely
-// valko
-// pannonhalma
-// mogyorod
-// nagykata
