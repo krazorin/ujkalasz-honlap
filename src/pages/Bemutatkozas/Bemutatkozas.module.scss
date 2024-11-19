@@ -1,0 +1,17 @@
+@import "src/styles/_variables";
+
+.mainTitle, .subTitle {
+  text-align: center;
+}
+
+.paragraphTitle {
+  font-weight: bold;
+}
+
+.noMarkerList {
+  list-style: none;
+}
+
+.dashList {
+  list-style-type: '- ';
+}
