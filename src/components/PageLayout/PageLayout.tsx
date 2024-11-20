@@ -1,7 +1,6 @@
 import { FunctionComponent, ReactNode } from "react"
-
-import Header from "src/components/Header/Header"
 import Footer from "src/components/Footer/Footer"
+import Header from "src/components/Header/Header"
 
 import styles from "./PageLayout.module.scss"
 

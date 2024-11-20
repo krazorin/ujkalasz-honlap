@@ -1,7 +1,5 @@
 import { FunctionComponent } from "react"
-
 import PageLayout from "src/components/PageLayout/PageLayout"
-
 import PhotoAlbum from "src/components/PhotoAlbum/PhotoAlbum"
 
 const photos = [

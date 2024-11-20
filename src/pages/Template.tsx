@@ -1,5 +1,4 @@
 import { FunctionComponent } from "react"
-
 import PageLayout from "src/components/PageLayout/PageLayout"
 
 import styles from "./Template.module.scss"

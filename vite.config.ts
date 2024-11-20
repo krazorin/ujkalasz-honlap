@@ -1,7 +1,6 @@
 import react from "@vitejs/plugin-react"
-import viteTsconfigPaths from 'vite-tsconfig-paths'
-
 import { defineConfig } from "vite"
+import viteTsconfigPaths from "vite-tsconfig-paths"
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,7 +10,7 @@ export default defineConfig({
       src: "/src",
     },
   },
-  base: '/',
+  base: "/",
   server: {
     port: 3000,
     watch: {
@@ -20,8 +19,8 @@ export default defineConfig({
   },
   css: {
     modules: {
-      scopeBehaviour: 'local',
-      generateScopedName: '[name]__[local]___[hash:base64:5]',
+      scopeBehaviour: "local",
+      generateScopedName: "[name]__[local]___[hash:base64:5]",
     },
   },
 })

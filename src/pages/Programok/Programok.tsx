@@ -1,7 +1,6 @@
 import { FunctionComponent } from "react"
-
-import PageLayout from "src/components/PageLayout/PageLayout"
 import Hirek from "src/components/Hirek/Hirek"
+import PageLayout from "src/components/PageLayout/PageLayout"
 
 import styles from "./Programok.module.scss"
 

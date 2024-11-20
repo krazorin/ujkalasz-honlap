@@ -1,6 +1,5 @@
 import { FunctionComponent, useEffect, useRef, useState } from "react"
 import { NavLink } from "react-router-dom"
-
 import kalaszLogo from "src/assets/kalasz-logo.svg"
 
 import styles from "./Header.module.scss"
