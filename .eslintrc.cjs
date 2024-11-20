@@ -14,7 +14,7 @@ module.exports = {
       'error',
       {
         'semi': false,
-        "endOfLine": "off"
+        "endOfLine": "auto"
       }
     ],
     'no-console': 'warn',

@@ -1,22 +1,22 @@
-import { Routes, Route } from "react-router-dom"
-
+import { Route, Routes } from "react-router-dom"
 import Home from "src/pages/Home/Home"
+
+import Alapszabaly from "./pages/Bemutatkozas/Alapszabaly"
 import Bemutatkozas from "./pages/Bemutatkozas/Bemutatkozas"
+import Kapcsolataink from "./pages/Bemutatkozas/Kapcsolataink"
 import Tortenetunk from "./pages/Bemutatkozas/Tortenetunk"
 import Vezerkonyv from "./pages/Bemutatkozas/Vezerkonyv"
-import Alapszabaly from "./pages/Bemutatkozas/Alapszabaly"
-import Kapcsolataink from "./pages/Bemutatkozas/Kapcsolataink"
-import Programok from "./pages/Programok/Programok"
+import Csoportjaink, {
+  csoportokRoutes,
+} from "./pages/Csoportjaink/Csoportjaink"
 import Elerhetosegeink from "./pages/Elerhetosegeink/Elerhetosegeink"
-import Rolunk from "./pages/Rolunk/Rolunk"
 import Kiadvanyok from "./pages/Kiadvanyok/Kiadvanyok"
+import Programok from "./pages/Programok/Programok"
+import Rolunk from "./pages/Rolunk/Rolunk"
 import VaciKalaszHaz from "./pages/VaciKalaszHaz/VaciKalaszHaz"
 import VaciKalaszHazArak from "./pages/VaciKalaszHaz/VaciKalaszHazArak"
 import VaciKalaszHazKepek from "./pages/VaciKalaszHaz/VaciKalaszHazKepek"
 import VaciKalaszHazTudnivalok from "./pages/VaciKalaszHaz/VaciKalaszHazTudnivalok"
-import Csoportjaink, {
-  csoportokRoutes,
-} from "./pages/Csoportjaink/Csoportjaink"
 
 import "src/App.scss"
 

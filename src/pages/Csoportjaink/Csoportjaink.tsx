@@ -1,11 +1,10 @@
 import { FunctionComponent } from "react"
 import { Route } from "react-router-dom"
-
 import PageLayout from "src/components/PageLayout/PageLayout"
-import Csoport from "./Csoport"
-import csoportok, { Csoport as CsoportType } from "./csoportok"
 
+import Csoport from "./Csoport"
 import styles from "./Csoportjaink.module.scss"
+import csoportok, { Csoport as CsoportType } from "./csoportok"
 
 export const csoportokRoutes = csoportok.map((csoport) => (
   <Route

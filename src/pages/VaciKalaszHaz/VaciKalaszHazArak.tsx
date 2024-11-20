@@ -1,5 +1,4 @@
 import { FunctionComponent } from "react"
-
 import kalaszLogo from "src/assets/kalasz-logo.svg"
 import PageLayout from "src/components/PageLayout/PageLayout"
 
