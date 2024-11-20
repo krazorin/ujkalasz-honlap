@@ -2,12 +2,10 @@ import { FunctionComponent } from "react"
 
 import PageLayout from "src/components/PageLayout/PageLayout"
 
-import styles from "./VaciKalaszHazTudnivalok.module.scss"
-
 const VaciKalaszHazTudnivalok: FunctionComponent = () => {
   return (
     <PageLayout>
-      <div className={styles.container}>
+      <div>
         <p>Vendégek tudnivalói</p>
         <p>
           <strong>A ház és a lehetőségei</strong>

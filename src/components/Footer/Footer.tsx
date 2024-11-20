@@ -17,11 +17,20 @@ const Footer: FunctionComponent = () => {
         </p>
         <p className={styles.address}>
           <a
-            href="https://www.google.com/maps/place/Budapest,+Hajn%C3%B3czy+J%C3%B3zsef+u.+10,+1122+Hungary/"
+            href="https://www.google.com/maps/place/Budapest,+Maros+utca+26,+1122"
             target="_blank"
             rel="noopener noreferrer"
           >
-            1122 Budapest Hajnóczy utca 10. I/9.
+            1122 Budapest, Maros utca 26.
+          </a>
+        </p>
+        <p>
+          <a
+            href="/assets/pdfs/A KALÁSZ ADATVÉDELMI ÉS ADATKEZELÉSI SZABÁLYZATA - 2024.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Adatvédelmi és adatkezelési szabályzat
           </a>
         </p>
       </div>
