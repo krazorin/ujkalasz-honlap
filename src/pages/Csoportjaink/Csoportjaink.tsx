@@ -1,18 +1,8 @@
 import { FunctionComponent } from "react"
-import { Route } from "react-router-dom"
 import PageLayout from "src/components/PageLayout/PageLayout"
+import csoportok, { Csoport as CsoportType } from "src/data/csoportok"
 
-import Csoport from "./Csoport"
 import styles from "./Csoportjaink.module.scss"
-import csoportok, { Csoport as CsoportType } from "./csoportok"
-
-export const csoportokRoutes = csoportok.map((csoport) => (
-  <Route
-    key={csoport.id}
-    path={`/csoportjaink/${csoport.id}`}
-    element={<Csoport csoport={csoport} />}
-  />
-))
 
 const renderGroupIntroduction = (csoport: CsoportType) => {
   return (

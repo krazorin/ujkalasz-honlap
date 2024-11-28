@@ -1,18 +1,18 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "src/pages/Home/Home"
 
+import { csoportokRoutes } from "./data/csoportok"
 import Alapszabaly from "./pages/Bemutatkozas/Alapszabaly"
 import Bemutatkozas from "./pages/Bemutatkozas/Bemutatkozas"
 import Kapcsolataink from "./pages/Bemutatkozas/Kapcsolataink"
 import Tortenetunk from "./pages/Bemutatkozas/Tortenetunk"
 import Vezerkonyv from "./pages/Bemutatkozas/Vezerkonyv"
-import Csoportjaink, {
-  csoportokRoutes,
-} from "./pages/Csoportjaink/Csoportjaink"
+import Csoportjaink from "./pages/Csoportjaink/Csoportjaink"
 import Elerhetosegeink from "./pages/Elerhetosegeink/Elerhetosegeink"
 import Kiadvanyok from "./pages/Kiadvanyok/Kiadvanyok"
 import Programok from "./pages/Programok/Programok"
 import Rolunk from "./pages/Rolunk/Rolunk"
+import UjKalaszUjsag from "./pages/UjKalaszUjsag/UjKalaszUjsag"
 import VaciKalaszHaz from "./pages/VaciKalaszHaz/VaciKalaszHaz"
 import VaciKalaszHazArak from "./pages/VaciKalaszHaz/VaciKalaszHazArak"
 import VaciKalaszHazKepek from "./pages/VaciKalaszHaz/VaciKalaszHazKepek"
@@ -26,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* To disable active class for "továbbiak" nav item in header */}
+        {/* TODO: improve behaviour */}
         <Route path="/tovabbiak" element={<Home />} />
         <Route path="/bemutatkozas" element={<Bemutatkozas />} />
         <Route path="/bemutatkozas/tortenetunk" element={<Tortenetunk />} />
@@ -35,6 +36,7 @@ function App() {
         <Route path="/programok" element={<Programok />} />
         <Route path="/elerhetosegeink" element={<Elerhetosegeink />} />
         <Route path="/csoportjaink" element={<Csoportjaink />} />
+        {csoportokRoutes}
         <Route path="/rolunk" element={<Rolunk />} />
         <Route path="/kiadvanyok" element={<Kiadvanyok />} />
         <Route path="/vaci-kalasz-haz" element={<VaciKalaszHaz />} />
@@ -44,7 +46,7 @@ function App() {
         />
         <Route path="/vaci-kalasz-haz/kepek" element={<VaciKalaszHazKepek />} />
         <Route path="/vaci-kalasz-haz/arak" element={<VaciKalaszHazArak />} />
-        {csoportokRoutes}
+        <Route path="/kiadvanyok/uj-kalasz-ujsag" element={<UjKalaszUjsag />} />
 
         <Route path="*" element={<Home />} />
       </Routes>

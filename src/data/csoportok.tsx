@@ -1,3 +1,6 @@
+import { Route } from "react-router-dom"
+import Csoport from "src/pages/Csoportjaink/Csoport"
+
 export interface Fejezet {
   cim: string
   szoveg: string[]
@@ -477,5 +480,13 @@ const csoportok: Csoport[] = [
     ],
   },
 ]
+
+export const csoportokRoutes = csoportok.map((csoport) => (
+  <Route
+    key={csoport.id}
+    path={`/csoportjaink/${csoport.id}`}
+    element={<Csoport csoport={csoport} />}
+  />
+))
 
 export default csoportok
