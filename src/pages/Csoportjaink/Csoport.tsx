@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react"
 import PageLayout from "src/components/PageLayout/PageLayout"
-import { Csoport as CsoportType } from "src/pages/Csoportjaink/csoportok"
+import { Csoport as CsoportType } from "src/data/csoportok"
 
 import styles from "./Csoport.module.scss"
 
