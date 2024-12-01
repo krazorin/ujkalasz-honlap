@@ -1,0 +1,42 @@
+@import "src/styles/_variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 35px;
+
+  .albumCover {
+
+    figure {
+      display: table;
+      margin: 0px;
+
+      img {
+        height: 250px;
+        display: block;
+        border-radius: 20px;
+        box-shadow: 6px -6px 0px 0px $default-burgundy, 12px -12px 0px 0px rgba($default-burgundy, 0.6);
+      }
+      
+      figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+        background-color: $white;
+        box-shadow: 0px 0px 15px 5px rgba(110, 110, 110, 0.2);
+        border-radius: 20px;
+        margin-top: -30px;
+        position: relative;
+        width: 95%;
+      }
+    }
+  }
+}
+
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+}

@@ -1,8 +1,9 @@
 import { FunctionComponent } from "react"
 import PageLayout from "src/components/PageLayout/PageLayout"
 import PhotoAlbum from "src/components/PhotoAlbum/PhotoAlbum"
+import { PhotoEntry } from "src/types/types"
 
-const photos = [
+const photos: PhotoEntry[] = [
   {
     src: "/assets/images/vaci_haz/1.KALÁSZ HÁZ.jpg",
     width: 1068,

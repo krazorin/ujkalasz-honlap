@@ -1,22 +1,8 @@
 import { Route } from "react-router-dom"
 import Csoport from "src/pages/Csoportjaink/Csoport"
+import type { CsoportEntry } from "src/types/types"
 
-export interface Fejezet {
-  cim: string
-  szoveg: string[]
-}
-
-export interface Csoport {
-  sorszam: number
-  id: string
-  nev: string
-  vezetoKep?: string
-  csoportKepek?: string[]
-  osszefoglalo: string
-  tartalom: Fejezet[]
-}
-
-const csoportok: Csoport[] = [
+const csoportok: CsoportEntry[] = [
   {
     sorszam: 1,
     id: "bp_krisztus_kiraly",

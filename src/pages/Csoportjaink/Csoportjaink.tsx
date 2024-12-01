@@ -1,10 +1,11 @@
 import { FunctionComponent } from "react"
 import PageLayout from "src/components/PageLayout/PageLayout"
-import csoportok, { Csoport as CsoportType } from "src/data/csoportok"
+import csoportok from "src/data/csoportok"
+import { CsoportEntry } from "src/types/types"
 
 import styles from "./Csoportjaink.module.scss"
 
-const renderGroupIntroduction = (csoport: CsoportType) => {
+const renderGroupIntroduction = (csoport: CsoportEntry) => {
   return (
     <div className={styles.csoportOsszefoglalo} key={csoport.id}>
       <p dangerouslySetInnerHTML={{ __html: csoport.osszefoglalo }} />

@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from "react"
 import { RowsPhotoAlbum } from "react-photo-album"
+import { PhotoEntry } from "src/types/types"
 import Lightbox from "yet-another-react-lightbox"
 import Counter from "yet-another-react-lightbox/plugins/counter"
 
@@ -8,15 +9,8 @@ import "yet-another-react-lightbox/styles.css"
 import "yet-another-react-lightbox/plugins/counter.css"
 import "./PhotoAlbum.scss"
 
-interface Photo {
-  src: string
-  width: number
-  height: number
-  alt: string
-}
-
 interface Props {
-  photos: Photo[]
+  photos: PhotoEntry[]
 }
 
 const PhotoAlbum: FunctionComponent<Props> = ({ photos }) => {
