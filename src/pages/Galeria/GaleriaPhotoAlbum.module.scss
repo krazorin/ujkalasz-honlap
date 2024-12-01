@@ -1,0 +1,24 @@
+@import "src/styles/_variables";
+
+.container {
+  .backButtonContainer {
+    margin-bottom: 30px;
+
+    a.backButton {
+      padding: 10px 25px;
+      border-radius: 10px;
+      border: 2px solid $default-burgundy;
+      color: $default-burgundy;
+      font-weight: bold;
+    }
+  }
+}
+
+// Media query for desktop
+@media (min-width: $min-width-tablet) {
+  .container {
+    .backButtonContainer {
+      margin-bottom: 60px;
+    }
+  }
+}

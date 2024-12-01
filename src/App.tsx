@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from "src/pages/Home/Home"
 
 import { csoportokRoutes } from "./data/csoportok"
+import { galeriaRoutes } from "./data/galeria"
 import Alapszabaly from "./pages/Bemutatkozas/Alapszabaly"
 import Bemutatkozas from "./pages/Bemutatkozas/Bemutatkozas"
 import Kapcsolataink from "./pages/Bemutatkozas/Kapcsolataink"
@@ -9,6 +10,7 @@ import Tortenetunk from "./pages/Bemutatkozas/Tortenetunk"
 import Vezerkonyv from "./pages/Bemutatkozas/Vezerkonyv"
 import Csoportjaink from "./pages/Csoportjaink/Csoportjaink"
 import Elerhetosegeink from "./pages/Elerhetosegeink/Elerhetosegeink"
+import Galeria from "./pages/Galeria/Galeria"
 import Kiadvanyok from "./pages/Kiadvanyok/Kiadvanyok"
 import Programok from "./pages/Programok/Programok"
 import Rolunk from "./pages/Rolunk/Rolunk"
@@ -38,6 +40,8 @@ function App() {
         <Route path="/csoportjaink" element={<Csoportjaink />} />
         {csoportokRoutes}
         <Route path="/rolunk" element={<Rolunk />} />
+        <Route path="/galeria" element={<Galeria />} />
+        {galeriaRoutes}
         <Route path="/kiadvanyok" element={<Kiadvanyok />} />
         <Route path="/vaci-kalasz-haz" element={<VaciKalaszHaz />} />
         <Route

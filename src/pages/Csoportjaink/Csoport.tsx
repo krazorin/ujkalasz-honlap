@@ -1,14 +1,14 @@
 import { FunctionComponent } from "react"
 import PageLayout from "src/components/PageLayout/PageLayout"
-import { Csoport as CsoportType } from "src/data/csoportok"
+import { CsoportEntry } from "src/types/types"
 
 import styles from "./Csoport.module.scss"
 
 interface Props {
-  csoport: CsoportType
+  csoport: CsoportEntry
 }
 
-const renderCsoportKepek = (csoport: CsoportType) => {
+const renderCsoportKepek = (csoport: CsoportEntry) => {
   if (!csoport.csoportKepek || csoport.csoportKepek.length < 1) {
     return <div />
   }
