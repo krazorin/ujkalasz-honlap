@@ -15,6 +15,13 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
   {
+    id: "0101",
+    type: "image",
+    title: "Csoportvezetői Képzés",
+    date: "2024. november 30.",
+    imageUrl: "0101-online_csopvezkepzes.png",
+  },
+  {
     id: "0100",
     type: "image",
     title: "Képzés",
