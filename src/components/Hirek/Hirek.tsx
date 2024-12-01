@@ -15,13 +15,33 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
   {
+    id: "0100",
+    type: "image",
+    title: "Képzés",
+    date: "2024. október 19.",
+    imageUrl: "0100-kepzes.png",
+  },
+  {
+    id: "0099",
+    type: "image",
+    title: "Pettendi piknik",
+    date: "2024. augusztus 10.",
+    imageUrl: "0099-pettendi_piknik_plakat.png",
+  },
+  {
+    id: "0098",
+    type: "image",
+    title: "Lelki nap",
+    date: "2024. április 24.",
+    imageUrl: "0098-lelki_nap_2024.png",
+  },
+  {
     id: "0097",
     type: "image",
     title: "Székely János",
     date: "2023. szeptember 22.",
     imageUrl: "0097-szekely_jános_online.png",
   },
-
   {
     id: "0096",
     title: "Süvege Gergő",

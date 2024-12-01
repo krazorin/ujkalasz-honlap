@@ -14,7 +14,7 @@ import Galeria from "./pages/Galeria/Galeria"
 import Kiadvanyok from "./pages/Kiadvanyok/Kiadvanyok"
 import Programok from "./pages/Programok/Programok"
 import Rolunk from "./pages/Rolunk/Rolunk"
-import UjKalaszUjsag from "./pages/UjKalaszUjsag/UjKalaszUjsag"
+// import UjKalaszUjsag from "./pages/UjKalaszUjsag/UjKalaszUjsag"
 import VaciKalaszHaz from "./pages/VaciKalaszHaz/VaciKalaszHaz"
 import VaciKalaszHazArak from "./pages/VaciKalaszHaz/VaciKalaszHazArak"
 import VaciKalaszHazKepek from "./pages/VaciKalaszHaz/VaciKalaszHazKepek"
@@ -50,7 +50,7 @@ function App() {
         />
         <Route path="/vaci-kalasz-haz/kepek" element={<VaciKalaszHazKepek />} />
         <Route path="/vaci-kalasz-haz/arak" element={<VaciKalaszHazArak />} />
-        <Route path="/kiadvanyok/uj-kalasz-ujsag" element={<UjKalaszUjsag />} />
+        {/* <Route path="/kiadvanyok/uj-kalasz-ujsag" element={<UjKalaszUjsag />} /> */}
 
         <Route path="*" element={<Home />} />
       </Routes>

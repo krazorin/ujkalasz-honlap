@@ -46,14 +46,14 @@ const navItems: NavItem[] = [
     id: 5,
     label: "Kiadványok",
     link: "/kiadvanyok",
-    subItems: [
-      {
-        id: 501,
-        label: "ÚJ KALÁSZ újság",
-        link: "/kiadvanyok/uj-kalasz-ujsag",
-      },
-      // { id: 502, label: "Egyéb kiadványok", link: "/kiadvanyok/egyeb" },
-    ],
+    // subItems: [
+    //   {
+    //     id: 501,
+    //     label: "ÚJ KALÁSZ újság",
+    //     link: "/kiadvanyok/uj-kalasz-ujsag",
+    //   },
+    //   // { id: 502, label: "Egyéb kiadványok", link: "/kiadvanyok/egyeb" },
+    // ],
   },
   {
     id: 6,
