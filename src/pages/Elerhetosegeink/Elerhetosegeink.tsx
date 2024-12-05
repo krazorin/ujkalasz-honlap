@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react"
 import PageLayout from "src/components/PageLayout/PageLayout"
+import elerhetosegek from "src/data/elerhetosegek"
 
 import styles from "./Elerhetosegeink.module.scss"
 
@@ -20,34 +21,38 @@ const Elerhetosegeink: FunctionComponent = () => {
           <p>A KALÁSZ központi irodájának elérhetőségei:</p>
           <p>
             <strong>Honlap:</strong>{" "}
-            <a href="www.ujkalasz.hu">www.ujkalasz.hu</a>
+            <a href={elerhetosegek.honlap.href}>{elerhetosegek.honlap.ertek}</a>
           </p>
           <p>
             <strong>Cím:</strong>{" "}
             <a
-              href="https://www.google.com/maps/place/Budapest,+Maros+utca+26,+1122"
+              href={elerhetosegek.postacim.href}
               target="_blank"
               rel="noopener noreferrer"
             >
-              1122 Budapest, Maros utca 26.
+              {elerhetosegek.postacim.ertek}
             </a>
           </p>
           <p>
             <strong>Telefonszám:</strong>{" "}
-            <a href="tel:+3613564534">06-1-356-4534</a>
+            <a href={elerhetosegek.telefonSzam.href}>
+              {elerhetosegek.telefonSzam.ertek}
+            </a>
           </p>
           <p>
             <strong>E-mail:</strong>{" "}
-            <a href="mailto:kalasz@ujkalasz.hu">kalasz@ujkalasz.hu</a>
+            <a href={elerhetosegek.emailCim.href}>
+              {elerhetosegek.emailCim.ertek}
+            </a>
           </p>
           <p>
             <strong>Facebook:</strong>{" "}
             <a
-              href="https://www.facebook.com/ujkalasz"
+              href={elerhetosegek.facebook.href}
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://www.facebook.com/ujkalasz
+              {elerhetosegek.facebook.ertek}
             </a>
           </p>
           {/* <p>

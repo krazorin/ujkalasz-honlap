@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react"
+import elerhetosegek from "src/data/elerhetosegek"
 
 import styles from "./Footer.module.scss"
 
@@ -7,21 +8,24 @@ const Footer: FunctionComponent = () => {
     <div className={styles.container}>
       <div className={styles.contact}>
         <p className={styles.phoneNumber}>
-          tel.: <a href="tel:+3613564534">+361/356-4534</a>
+          tel.:{" "}
+          <a href={elerhetosegek.telefonSzam.href}>
+            {elerhetosegek.telefonSzam.ertek}
+          </a>
         </p>
         <p className={styles.email}>
           email:{" "}
-          <a href="mailto:kalasz@kalasz.t-online.hu">
-            kalasz@kalasz.t-online.hu
+          <a href={elerhetosegek.emailCim.href}>
+            {elerhetosegek.emailCim.ertek}
           </a>
         </p>
         <p className={styles.address}>
           <a
-            href="https://www.google.com/maps/place/Budapest,+Maros+utca+26,+1122"
+            href={elerhetosegek.postacim.href}
             target="_blank"
             rel="noopener noreferrer"
           >
-            1122 Budapest, Maros utca 26.
+            {elerhetosegek.postacim.ertek}
           </a>
         </p>
         <p>
@@ -152,21 +156,6 @@ const Footer: FunctionComponent = () => {
             <img src="/assets/images/supporters/krisztus_kiraly_templomigazgatosag.bmp" />
           </a>
         </div>
-        {/* <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul> */}
       </div>
     </div>
   )

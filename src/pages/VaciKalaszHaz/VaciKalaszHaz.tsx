@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react"
 import PageLayout from "src/components/PageLayout/PageLayout"
+import elerhetosegek from "src/data/elerhetosegek"
 
 import styles from "./VaciKalaszHaz.module.scss"
 
@@ -99,11 +100,11 @@ const VaciKalaszHaz: FunctionComponent = () => {
           </p>
           <p>
             További részletek (2023 februártól):{" "}
-            <a href="www.ujkalasz.hu">www.ujkalasz.hu</a>
+            <a href={elerhetosegek.honlap.href}>{elerhetosegek.honlap.ertek}</a>
             <br />
             Facebook:{" "}
             <a
-              href="https://www.facebook.com/ujkalasz"
+              href={elerhetosegek.facebook.href}
               target="_blank"
               rel="noopener noreferrer"
             >
