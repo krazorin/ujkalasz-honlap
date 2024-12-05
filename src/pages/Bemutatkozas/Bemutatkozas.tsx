@@ -6,13 +6,13 @@ import styles from "./Bemutatkozas.module.scss"
 const Bemutatkozas: FunctionComponent = () => {
   return (
     <PageLayout>
-      <h1 className={styles.mainTitle}>Kalász</h1>
+      <h1 className={styles.mainTitle}>KALÁSZ</h1>
       <p className={styles.subTitle}>
-        <strong>K</strong>atolikus <strong>A</strong>sszonyok és{" "}
+        <strong>K</strong>atolikus <strong>A</strong>sszonyok -{" "}
         <strong>L</strong>ányok <strong>S</strong>zövetsége
       </p>
       <p>
-        A KALÁSZ 1936-ban alakult meg. 1946-ban mûködését betiltották, 1990-ben
+        A KALÁSZ 1936-ban alakult meg. 1946-ban működését betiltották, 1990-ben
         alakult újjá.
       </p>
 
@@ -59,10 +59,10 @@ const Bemutatkozas: FunctionComponent = () => {
 
       <br />
       <br />
-      <p className={styles.paragraphTitle}>Hogyan mûködik a KALÁSZ?</p>
+      <p className={styles.paragraphTitle}>Hogyan működik a KALÁSZ?</p>
       <br />
 
-      <p className={styles.paragraphTitle}>Rendszeres csoportfoglalkozások</p>
+      <p className={styles.paragraphTitle}>Rendszeres csoporttalálkozók</p>
       <p>
         Egyházközségi csoportokban (fiatal és idősebb asszonyok, nagylányok,
         kislányok), a plébános által jóváhagyott vezetőnőkkel készülnek női
