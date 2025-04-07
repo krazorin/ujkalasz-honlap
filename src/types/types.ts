@@ -26,3 +26,13 @@ export type PhotoAlbumEntry = {
   coverPhoto: string
   photos: PhotoEntry[]
 }
+
+export type NewsItem = {
+  id: string
+  type: "image" | "text" | "mixed"
+  title: string
+  date: string
+  text?: string
+  imageUrl?: string
+  imageSide?: "right" | "left"
+}
